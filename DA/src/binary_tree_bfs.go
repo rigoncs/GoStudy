@@ -3,9 +3,19 @@ package src
 import "container/list"
 
 type TreeNode struct {
-	Val   any
-	Left  *TreeNode
-	Right *TreeNode
+	Val    any
+	Left   *TreeNode
+	Right  *TreeNode
+	Height int
+}
+
+func newTreeNode(val int) *TreeNode {
+	return &TreeNode{
+		Val:    val,
+		Left:   nil,
+		Right:  nil,
+		Height: 0,
+	}
 }
 
 func levelOrder(root *TreeNode) []any {
