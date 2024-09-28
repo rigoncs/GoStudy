@@ -1,6 +1,6 @@
 package arrayandlinkedlist
 
-import . "tmp/pkg"
+import . "practice/pkg"
 
 func insertNode(n0, P *ListNode) {
 	n1 := n0.Next
