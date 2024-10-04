@@ -14,16 +14,16 @@
 1.客户端不知道它所需要的对象的类
 2. 抽象工厂类通过其子类来指定创建哪个对象
 */
-package main
+package pkg1
 
 import "fmt"
 
-//抽象层
+// 抽象层
 type Shoes interface {
 	Show()
 }
 
-//实现层
+// 实现层
 type XStep struct{}
 
 func (x *XStep) Show() {
@@ -36,7 +36,7 @@ func (ln *LiNing) Show() {
 	fmt.Println("LiNing running!")
 }
 
-//工厂模块
+// 工厂模块
 type ShoesFactory interface {
 	CreateShoes() Shoes
 }
@@ -53,7 +53,7 @@ func (sf *LiNingFactory) CreateShoes() Shoes {
 	return new(LiNing)
 }
 
-//业务逻辑层
+// 业务逻辑层
 func main6() {
 	lnFactory := new(LiNingFactory)
 	lnShoes := lnFactory.CreateShoes()

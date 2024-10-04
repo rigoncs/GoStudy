@@ -1,4 +1,4 @@
-package main
+package chap1
 
 // Send the sequence 2, 3, 4, ... to channel 'ch'.
 func Generate(ch chan<- int) {

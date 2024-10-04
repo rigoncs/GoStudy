@@ -14,11 +14,11 @@
 1.系统中有多于一个的产品族。而每次只使用其中某一产品族。可以通过配置文件等方式来使得用户可以动态改变产品族，也可以很方便地增加新的产品族
 2.产品等级结构稳定。设计完成后，不会向系统中增加新的产品等级结构或者删除已有的产品等级结构
 */
-package main
+package pkg1
 
 import "fmt"
 
-//抽象层
+// 抽象层
 type AbstractApple interface {
 	ShowApple()
 }
@@ -79,7 +79,7 @@ func (uf *USAFactory) CreateBanana() AbstractBanana {
 	return new(USABanana)
 }
 
-//业务逻辑层
+// 业务逻辑层
 func main7() {
 	cnFactory := new(ChinaFactory)
 	cnApple := cnFactory.CreateApple()

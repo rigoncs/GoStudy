@@ -13,16 +13,16 @@
 中的业务逻辑太过复杂
 2. 客户端只知道传入工厂类的参数，对于如何创建对象并不关心
 */
-package main
+package pkg1
 
 import "fmt"
 
-//抽象层
+// 抽象层
 type Fruit interface {
 	Show()
 }
 
-//实现层
+// 实现层
 type Apple struct{}
 
 func (apple *Apple) Show() {
@@ -41,7 +41,7 @@ func (pear *Pear) Show() {
 	fmt.Println("pear!")
 }
 
-//工厂模块
+// 工厂模块
 type Factory struct{}
 
 func (factory *Factory) CreateFruit(name string) Fruit {
@@ -57,7 +57,7 @@ func (factory *Factory) CreateFruit(name string) Fruit {
 	return fruit
 }
 
-//业务逻辑层
+// 业务逻辑层
 func main5() {
 	factory := new(Factory)
 	apple := factory.CreateFruit("apple")

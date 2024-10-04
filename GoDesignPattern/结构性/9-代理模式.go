@@ -8,7 +8,7 @@
 缺点：
 代理实现较为复杂
 */
-package main
+package pkg2
 
 import "fmt"
 
@@ -17,12 +17,12 @@ type Goods struct {
 	Fact bool
 }
 
-//抽象层
+// 抽象层
 type Shopping interface {
 	Buy(goods *Goods)
 }
 
-//实现层
+// 实现层
 type KoreaShopping struct {
 }
 
@@ -67,7 +67,7 @@ func NewProxy(shopping Shopping) OverseasProxy {
 	return OverseasProxy{shopping: shopping}
 }
 
-//业务逻辑层
+// 业务逻辑层
 func main1() {
 	good1 := Goods{
 		Kind: "泡菜",

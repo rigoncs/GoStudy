@@ -9,7 +9,7 @@ main函数执行前就分配内存，即使不调用也会分配内存
 
 保证一个类永远只能有一个对象，这个对象还能被系统的其他模块使用
 */
-package main
+package pkg1
 
 import (
 	"fmt"
