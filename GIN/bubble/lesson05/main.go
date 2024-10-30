@@ -15,7 +15,7 @@ type User struct {
 func sayHello(w http.ResponseWriter, r *http.Request) {
 	tmpl, err := template.ParseFiles("./demo.tmpl")
 	if err != nil {
-		fmt.Println("Create template failed, err:%v\n", err)
+		fmt.Printf("Create template failed, err:%v\n", err)
 		return
 	}
 	user := User{
@@ -44,7 +44,7 @@ func main() {
 	http.HandleFunc("/", sayHello)
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
-		fmt.Println("HTTP server start failed, aerr:%v", err)
+		fmt.Printf("HTTP server start failed, aerr:%v", err)
 		return
 	}
 }
