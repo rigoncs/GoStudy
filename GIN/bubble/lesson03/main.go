@@ -1,4 +1,4 @@
-package lesson03
+package main
 
 import "github.com/gin-gonic/gin"
 
